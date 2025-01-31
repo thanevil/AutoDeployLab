@@ -1,0 +1,17 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Ignore Kubernetes configs
+*.kubeconfig
+
+# Ignore Docker build artifacts
+dist/
+*.tar
+docker-compose.override.yml
