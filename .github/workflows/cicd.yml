@@ -26,7 +26,7 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -r src/app/requirements.txt -r dev-requirements.txt
+          pip install -r requirements.txt -r dev-requirements.txt
           echo "source venv/bin/activate" >> $GITHUB_ENV
 
       - name: Lint Code
