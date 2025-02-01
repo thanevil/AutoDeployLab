@@ -1,6 +1,8 @@
 import logging
 from fastapi import FastAPI
 from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -9,12 +11,12 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+
 class Settings(BaseSettings):
     app_name: str = "AutoDeployLab"
     debug: bool = False
 
-    class Config:
-        env_file = ".env"  # Load values from .env file if available
+    model_config = ConfigDict(env_file=".env")
 
 settings = Settings()
 
