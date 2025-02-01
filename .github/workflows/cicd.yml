@@ -30,6 +30,7 @@ jobs:
 
       - name: Lint Code
         run: |
+          source venv/bin/activate
           black --check src/app
           flake8 src/app
 
