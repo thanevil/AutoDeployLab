@@ -26,8 +26,8 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -r src/app/requirements.txt
-          pip install pytest flake8 black
+          pip install -r src/app/requirements.txt -r dev-requirements.txt
+          echo "source venv/bin/activate" >> $GITHUB_ENV
 
       - name: Lint Code
         run: |
